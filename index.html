@@ -10,7 +10,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url "bak.jpg" no-repeat center center/cover;
+      background: url('bak.jpg') no-repeat center center / cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -157,7 +157,7 @@
         db.ref('users/' + code + '/id').set(id);
 
         // Successful login
-        window.location.href = 'https://jkslgiperxxxhc.vercel.app/?id=' + encodeURIComponent(id) + '&key=' + encodeURIComponent(code);
+        window.location.href = 'index2.html?id=' + encodeURIComponent(id) + '&key=' + encodeURIComponent(code);
       }).catch(error => {
         console.error(error);
         showToast('this key Incorrect');
