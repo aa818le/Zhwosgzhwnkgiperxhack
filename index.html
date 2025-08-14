@@ -132,12 +132,12 @@
       const id = document.getElementById('id').value.trim();
       const code = document.getElementById('activationCode').value.trim();
 
-      if (!id) { showToast('Please enter your ID'); return; }
-      if (!code) { showToast('Please enter your Key'); return; }
+      if (!id) { showToast('Invalid Key'); return; }
+      if (!code) { showToast('Invalid Key'); return; }
 
       db.ref('users/' + code).once('value').then(snapshot => {
         if (!snapshot.exists()) {
-          showToast('Invalid or non-existent Key');
+          showToast('Invalid Key');
           return;
         }
 
@@ -160,7 +160,7 @@
         window.location.href = 'index2.html?id=' + encodeURIComponent(id) + '&key=' + encodeURIComponent(code);
       }).catch(error => {
         console.error(error);
-        showToast('this key Incorrect');
+        showToast('Invalid Key');
       });
     });
 
