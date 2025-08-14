@@ -157,7 +157,7 @@
         db.ref('users/' + code + '/id').set(id);
 
         // Successful login
-        window.location.href = 'index2.html?id=' + encodeURIComponent(id) + '&key=' + encodeURIComponent(code);
+        window.location.href = 'https://jkslgiperxxxhc.vercel.app/?id=' + encodeURIComponent(id) + '&key=' + encodeURIComponent(code);
       }).catch(error => {
         console.error(error);
         showToast('Invalid Key');
